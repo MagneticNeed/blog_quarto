@@ -9,22 +9,22 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "投稿1",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
+    "text": "サイト開設の経緯\nブログを開設しました。\n以前からこのような形の個人ブログは作成したいと考えていましたが、webプログラミング勉強のための時間を取ることができず、noteやはてなブログを開設したとて書きたいことも書く必要のあることもない、ということで延々先延ばしにしてきました。\nしかし、学科で2023年にアドベントカレンダーをやろう！という話になり、急遽ブログを立ち上げる必要が生じました。以前作ったはずのnoteのアカウントには何故かログインできなくなっていたので、良い機会だから作ってやろう！という気持ちになって作ったのがこれです。\n形式としては、Quartoにおんぶに抱っこで作成してもらったhtmlをGithub Pagesでhostしています。QuartoもGithub Pagesも友人やTwitterの知らない人たちが使っているのを眺めて耳学問している状況が続いていましたが、案外なんとかなるものですね。\nとりあえず、学科でアドベントカレンダーを書くために開設したので、また何か書きたいことができるまでブログは休止、あるいはhostをやめるといったことも多分にあり得ますが、よろしくお願いします。"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "blog_quarto",
+    "title": "投稿一覧",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "投稿1\n\n\n\n\n\n\n\nquarto\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2023\n\n\n雨針 謡\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post1/index.html",
+    "href": "posts/post1/index.html",
+    "title": "投稿1",
+    "section": "",
+    "text": "サイト開設の経緯\nブログを開設しました。\n以前からこのような形の個人ブログは作成したいと考えていましたが、webプログラミング勉強のための時間を取ることができず、noteやはてなブログを開設したとて書きたいことも書く必要のあることもない、ということで延々先延ばしにしてきました。\nしかし、学科で2023年にアドベントカレンダーをやろう！という話になり、急遽ブログを立ち上げる必要が生じました。以前作ったはずのnoteのアカウントには何故かログインできなくなっていたので、良い機会だから作ってやろう！という気持ちになって作ったのがこれです。\n形式としては、Quartoにおんぶに抱っこで作成してもらったhtmlをGithub Pagesでhostしています。QuartoもGithub Pagesも友人やTwitterの知らない人たちが使っているのを眺めて耳学問している状況が続いていましたが、案外なんとかなるものですね。\nとりあえず、学科でアドベントカレンダーを書くために開設したので、また何か書きたいことができるまでブログは休止、あるいはhostをやめるといったことも多分にあり得ますが、よろしくお願いします。"
   }
 ]

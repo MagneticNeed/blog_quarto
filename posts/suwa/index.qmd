@@ -1,0 +1,12 @@
+---
+title: "日本の中心で、愛を叫ぶ"
+author: "雨針 謡"
+date: "2023-12-24"
+categories: [地理]
+image: "image.jpg"
+draft: true
+---
+# 建前
+この記事は UTMed advent calendar 2023の24日目の記事です。
+
+# 日本の中心って？
