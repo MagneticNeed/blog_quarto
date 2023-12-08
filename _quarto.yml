@@ -5,7 +5,6 @@ project:
 website:
   title: "西方コンパス"
   navbar:
-    background: "#40e0d0"
     logo-alt: あああ
     pinned: true
     right:
@@ -21,7 +20,7 @@ sidebar:
 
 format:
   html:
-    theme: default
+    theme: cosmo
     css: styles.css
 
 
