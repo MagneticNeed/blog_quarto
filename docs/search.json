@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "甘針 謡(Yo Amahari)",
     "section": "",
-    "text": "About this blog"
+    "text": "About this blog\n備忘録。たまにオタク語り。"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -25,6 +25,20 @@
     "href": "posts/post1/index.html",
     "title": "投稿1",
     "section": "",
-    "text": "サイト開設の経緯\nブログを開設しました。\n以前からこのような形の個人ブログは作成したいと考えていましたが、webプログラミング勉強のための時間を取ることができず、noteやはてなブログを開設したとて書きたいことも書く必要のあることもない、ということで延々先延ばしにしてきました。\nしかし、学科で2023年にアドベントカレンダーをやろう！という話になり、急遽ブログを立ち上げる必要が生じました。以前作ったはずのnoteのアカウントには何故かログインできなくなっていたので、良い機会だから作ってやろう！という気持ちになって作ったのがこれです。\n形式としては、Quartoにおんぶに抱っこで作成してもらったhtmlをGithub Pagesでhostしています。QuartoもGithub Pagesも友人やTwitterの知らない人たちが使っているのを眺めて耳学問している状況が続いていましたが、案外なんとかなるものですね。\nとりあえず、学科でアドベントカレンダーを書くために開設したので、また何か書きたいことができるまでブログは休止、あるいはhostをやめるといったことも多分にあり得ますが、よろしくお願いします。"
+    "text": "ブログを開設しました。"
+  },
+  {
+    "objectID": "posts/post1/index.html#quarto",
+    "href": "posts/post1/index.html#quarto",
+    "title": "投稿1",
+    "section": "Quarto",
+    "text": "Quarto"
+  },
+  {
+    "objectID": "posts/post1/index.html#github-pages",
+    "href": "posts/post1/index.html#github-pages",
+    "title": "投稿1",
+    "section": "Github Pages",
+    "text": "Github Pages"
   }
 ]

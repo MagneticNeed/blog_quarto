@@ -13,4 +13,5 @@ about:
 
 ---
 
-About this blog
+# About this blog
+備忘録。たまにオタク語り。
