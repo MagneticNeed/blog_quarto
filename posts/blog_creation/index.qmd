@@ -6,10 +6,6 @@ categories:
     - quarto
     - github
 image: "kyoikuto.JPG"
-format:
-  html:
-    code-fold: true
-    code-summary: "Show the code"
 ---
 # TL;DR
 [投稿1](../post1/index.qmd)でブログを開設した際の技術的詳細について

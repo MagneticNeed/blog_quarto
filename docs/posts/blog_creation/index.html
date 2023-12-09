@@ -171,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話</h1>
   <div class="quarto-categories">
     <div class="quarto-category">quarto</div>
     <div class="quarto-category">github</div>
@@ -311,8 +311,6 @@ Note
 <p>何かツッコミどころ等ありましたら（あると思うので）ツッコんでください。</p>
 
 
-<!-- -->
-
 </section>
 
 </main> <!-- /main -->
@@ -395,57 +393,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -613,115 +560,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "雨針 謡"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-12-09"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">    - quarto</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">    - github</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "kyoikuto.JPG"</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">    code-summary: "Show the code"</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu"># TL;DR</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">投稿1</span><span class="co">](../post1/index.qmd)</span>でブログを開設した際の技術的詳細について</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># はじめに</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>QuartoでrenderしたhtmlをGitHub Pagesでホストしました。主に2つのターゲット層があり、1つはQuartoは使ったことがあるがhtmlファイルを作るのに使ったことがない人や、GitHub Pagesで自動的にホストする手順を知らない人達。もう1つはそもそもQuartoを使ったことがない人やノーコードのblogフレームワークでblogを書くのにちょっと飽きた、違うことをしてみたいという人たちです。嘘です。備忘録なので割と行間が大きいです。</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>人生で一度は自分のブログをNoteやはてなブログに頼らず書いてみたくないですか？私は書いてみたかったので、そうしました。</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>以下のパートで、QuartoとGitHub Pagesの2つについて個別に説明していきます。</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># 具体的な技術について</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quartoとは？</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>まず、Quartoについて。Quartoというのはオープンソース科学/技術出版システムの一つで、qmd形式という一種のMarkdown形式で記述したテキストをpdfやhtmlなど、さまざまな形式に変換するシステムになっています。</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>そもそもMarkdown形式とは何か？ということについては、<span class="co">[</span><span class="ot">wikipedia</span><span class="co">](https://ja.wikipedia.org/wiki/Markdown)</span>を参照してください。Markdown形式を使うと、適切なエディタやサーバー（NotionとかObsidianなどが有名でしょう、ある友人はTyporaというやつを推しています。他にも、mediawikiなんかに使われています。）のサポートを受けて、簡単に見出しや太字、斜体付きのメモを取ることができます。もちろんWordでも見出しや太字、斜体付きのメモは取れますが、いちいち文字列を選択してctrl+Bとかctrl+Iとかやるのはある観点からは面倒です。</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="fu">### うれしさ</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>Quartoのうれしさというのは、主に2つある気がしています。</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>1つは、Markdown記法に共通のうれしさです。備忘録や講義ノートとして雑に書いたメモをそのままレポートやweb記事に転用できたら嬉しいですよね？僕は嬉しいです。正直、web記事を書くだけならQiita等を使えばいい話ではあるので、同じ記法で種々の媒体に載せることができるというのがメリットの一つかなと思っています。</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>例えば、LaTeXを使うと非常に綺麗な数式入りのレポートを執筆することができますが、これをそのままwebに転用することは困難です（KaTeXとかあるけど）。一方、Markdown記法を駆使してQiitaで手早く技術系の記事を仕上げることはできますが、同じやり方でレポートを書くことはできません。</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>2つ目はQuartoに固有の特徴故のもので、様々なプログラミング言語を内部で処理できるということです。具体的には、PythonやJulia、R、Javascriptなどです（恐らくメインのユーザーはPython使いだが、歴史的経緯的にはRが先頭に来る）。PythonとQuartoを組み合わせた使用例としては<span class="co">[</span><span class="ot">これ</span><span class="co">](https://qiita.com/Nobukuni-Hyakutake/items/112a7bd5b34abd446395)</span>を読むとよいです。</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="fu">### 導入について</span></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>一つ一つ説明していきたいのですが、かなり<span class="co">[</span><span class="ot">公式のdocument</span><span class="co">](https://quarto.org/)</span>と<span class="co">[</span><span class="ot">友人2の記事</span><span class="co">](https://qiita.com/Sangen_u/items/ff7ee6ec1ef2c13f8f99)</span>が充実しているので、これで説明に代えます。</span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## GitHub Pages</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>一般的な概要は<span class="co">[</span><span class="ot">GitHub公式のdocument</span><span class="co">](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages)</span>、Quartoとの連携については<span class="co">[</span><span class="ot">Quarto公式のdocument</span><span class="co">](https://quarto.org/docs/publishing/github-pages.html)</span>にまとまっていて、これを読めば全てわかるように書かれてあるのですが、簡約版を記載しておきます。</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### GitHub Pagesとは</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>GitHub Pagesというのは、GitHub上のレポジトリに置いたhtml, css, Javascriptといったコードを認識して、これらのコードを元にGitHub側で自動的にwebページをホストしてくれる機能のことです。本来、webページを作るためにはドメインを取得して（.comや.jpといった有料ドメインならお名前.comで定期購入するとか）、サーバー（これもリモートの月額いくらのものがあったり、自宅に設置したりする）を押さえて......といった、コーディングとは別次元の面倒な作業が必要とされます（し、こういった手続きに慣れておくのも悪くはありません）が、こういった面倒さから解放されるための手段の一つがGitHub Pagesというわけです。因みに、同種のツールとしてNetlifyが挙げられます。Netlifyで書かれたwebアプリの例としては、<span class="co">[</span><span class="ot">Genochemy</span><span class="co">](https://genochemy.netlify.app/)</span>があります。</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quartoとの連携</span></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>作成したQuartoの新規プロジェクトのディレクトリをGitHubに同期します。以下は、VScodeでQuartoの新規プロジェクトを作った直後からの作業を想定しています。</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>対応するGitHubレポジトリを作成する。</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>作りましょう。</span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>作成したレポジトリと手元のコードを紐付ける。</span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>以下をshellに入れます。ここまでは、GitHub Pagesではなく、GitHub全般に共通する作業です。</span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="in">```zsh</span></span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git init</span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote add origin https://github.com/OWNER/REPOSITORY.git</span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>続いて、renderしてからGitHubにpushします。</span>
-<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a><span class="in">```zsh</span></span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quarto render</span>
-<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>最後に、GitHubレポジトリのSettings/Codes and automation/Pagesという階層にGitHub Pages siteをビルトするブランチとディレクトリを指定する場所があるので、main branchの/docsディレクトリを選択します。これにより、以降手元環境からmain branchにcommitするごとにブログの内容が手元環境を反映したものになります。</span>
-<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>ディレクトリ構造は以下のようになっている。<span class="in">`/posts`</span>ディレクトリで作られたindex.qmdファイルが<span class="in">`/docs`</span>ディレクトリ内のindex.htmlファイルにrenderされている。このため、GitHub Pagesでは<span class="in">`/docs`</span>ディレクトリをビルドディレクトリに指定した。</span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="in">```default</span></span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="in">.</span></span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="in">├── _freeze</span></span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="in">├── _quarto.yml</span></span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="in">├── blog.qmd</span></span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="in">├── docs</span></span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── about.html</span></span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── blog.html</span></span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── index.html</span></span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── listings.json</span></span>
-<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── posts</span></span>
-<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   ├── blog_tech</span></span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   │   ├── index.html</span></span>
-<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   │   └── kyoikuto.JPG</span></span>
-<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   ├── post1</span></span>
-<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   │   ├── index.html</span></span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   │   └── kyoikuto.JPG</span></span>
-<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── profile.jpg</span></span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── search.json</span></span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── site_libs</span></span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="in">├── index.qmd</span></span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="in">├── posts</span></span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── _metadata.yml</span></span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── blog_tech</span></span>
-<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   ├── index.qmd</span></span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   └── kyoikuto.JPG</span></span>
-<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── post1</span></span>
-<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   ├── index.qmd</span></span>
-<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   ├── kyoikuto.JPG</span></span>
-<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a><span class="in">│   │   └── thumbnail.jpg</span></span>
-<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a><span class="in">├── profile.jpg</span></span>
-<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a><span class="in">└── styles.css</span></span>
-<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="fu"># 最後に</span></span>
-<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>何かツッコミどころ等ありましたら（あると思うので）ツッコんでください。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+</script>
 </div> <!-- /content -->
 
 

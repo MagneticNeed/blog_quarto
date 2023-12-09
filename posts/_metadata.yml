@@ -21,18 +21,3 @@ link-external-newwindow: true
 format:
   html: 
     html-math-method: katex
-    code-fold: true
-    code-tools: true
-    code-block-bg: true
-    code-block-border-left: "#31BAE9"
-
-#########################
-# You can skip this part in the first step
-# format:
-#   html:
-#     include-after-body: ../footer.html
-
-# comments: 
-#   utterances: 
-#     repo:  AlbertRapp/blogComments 
-#########################
