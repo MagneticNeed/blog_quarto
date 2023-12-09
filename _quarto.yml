@@ -5,11 +5,10 @@ project:
 website:
   title: "西方コンパス"
   navbar:
-    logo-alt: あああ
     pinned: true
     right:
-      - text: "About"
-        file: about.qmd
+      - text: "Blog"
+        file: blog.qmd
       - icon: github
         href: https://github.com/
       - icon: twitter

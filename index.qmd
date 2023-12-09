@@ -1,14 +1,17 @@
 ---
-title: "投稿一覧"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "甘針 謡(Yo Amahari)"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/y_East_ern
+    - icon: github
+      text: Github
+      href: https://github.com/MagneticNeed
+
 ---
 
-
+# About this blog
+備忘録。たまにオタク語り。

@@ -4,5 +4,12 @@
     "items": [
       "/posts/post1/index.html"
     ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/blog_creation/index.html",
+      "/posts/post1/index.html"
+    ]
   }
 ]

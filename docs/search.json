@@ -16,23 +16,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "投稿一覧",
+    "title": "甘針 謡(Yo Amahari)",
     "section": "",
-    "text": "投稿1\n\n\n\n\n\n\n\nquarto\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2023\n\n\n雨針 謡\n\n\n\n\n\n\nNo matching items"
+    "text": "About this blog\n備忘録。たまにオタク語り。"
   },
   {
     "objectID": "posts/post1/index.html",
     "href": "posts/post1/index.html",
     "title": "投稿1",
     "section": "",
-    "text": "ブログを開設しました。"
+    "text": "TL;DR\nブログを開設しました。\n\n\nブログ開設の経緯\n以前からこのような形の個人ブログは作成したいと考えていましたが、webプログラミング勉強のための時間を取ることができず、noteやはてなブログを開設したとて書きたいことも書く必要のあることもない、ということで延々先延ばしにしてきました。\nしかし、学科で2023年にアドベントカレンダーをやろう！という話になり、急遽ブログを立ち上げる必要が生じました。以前作ったはずのnoteのアカウントには何故かログインできなくなっていたので、良い機会だから作ってやろう！という気持ちになって作ったのがこれです。\n形式としては、Quartoにおんぶに抱っこで作成してもらったhtmlをGitHub Pagesでhostしています。QuartoもGitHub Pagesも友人やTwitterの知らない人たちが使っているのを眺めて耳学問している状況が続いていましたが、案外なんとかなるものですね。\nとは言え、一般のブログを書く用途としてはnoteに劣るところが多いので、向こうのアカウントが復帰したらこちらには数式とかソースコード関連の記事しか載せないと思います。"
   },
   {
     "objectID": "posts/post1/index.html#quarto",
     "href": "posts/post1/index.html#quarto",
     "title": "投稿1",
     "section": "Quarto",
-    "text": "Quarto"
+    "text": "Quarto\nまず、Quartoについて。一つ一つ説明していきたいのですが、かなり公式のdocumentと知人の記事が充実しているので、これで説明に代えます。"
   },
   {
     "objectID": "posts/post1/index.html#github-pages",
@@ -40,5 +40,54 @@
     "title": "投稿1",
     "section": "Github Pages",
     "text": "Github Pages"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "投稿一覧",
+    "section": "",
+    "text": "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話\n\n\n\n\n\n\n\nquarto\n\n\ngithub\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2023\n\n\n雨針 謡\n\n\n\n\n\n\n  \n\n\n\n\n投稿1\n\n\n\n\n\n\n\nquarto\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2023\n\n\n雨針 謡\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/blog_tech/index.html",
+    "href": "posts/blog_tech/index.html",
+    "title": "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話",
+    "section": "",
+    "text": "投稿1でブログを開設した際の技術的詳細について"
+  },
+  {
+    "objectID": "posts/blog_tech/index.html#quarto",
+    "href": "posts/blog_tech/index.html#quarto",
+    "title": "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話",
+    "section": "Quarto",
+    "text": "Quarto\n\nQuartoとは？\nまず、Quartoについて。Quartoというのはオープンソース科学/技術出版システムの一つで、qmd形式という一種のMarkdown形式で記述したテキストをpdfやhtmlなど、さまざまな形式に変換するシステムになっています。\nそもそもMarkdown形式とは何か？ということについては、wikipediaを参照してください。Markdown形式を使うと、適切なエディタやサーバー（NotionとかObsidianなどが有名でしょう、ある友人はTyporaというやつを推しています。他にも、mediawikiなんかに使われています。）のサポートを受けて、簡単に見出しや太字、斜体付きのメモを取ることができます。もちろんWordでも見出しや太字、斜体付きのメモは取れますが、いちいち文字列を選択してctrl+Bとかctrl+Iとかやるのはある観点からは面倒です。\n\n\nうれしさ\nQuartoのうれしさというのは、主に2つある気がしています。\n1つは、Markdown記法に共通のうれしさです。備忘録や講義ノートとして雑に書いたメモをそのままレポートやweb記事に転用できたら嬉しいですよね？僕は嬉しいです。正直、web記事を書くだけならQiita等を使えばいい話ではあるので、同じ記法で種々の媒体に載せることができるというのがメリットの一つかなと思っています。 例えば、LaTeXを使うと非常に綺麗な数式入りのレポートを執筆することができますが、これをそのままwebに転用することは困難です（KaTeXとかあるけど）。一方、Markdown記法を駆使してQiitaで手早く技術系の記事を仕上げることはできますが、同じやり方でレポートを書くことはできません。\n2つ目はQuartoに固有の特徴故のもので、様々なプログラミング言語を内部で処理できるということです。具体的には、PythonやJulia、R、Javascriptなどです（恐らくメインのユーザーはPython使いだが、歴史的経緯的にはRが先頭に来る）。PythonとQuartoを組み合わせた使用例としてはこれを読むとよいです。\n\n\n導入について\n一つ一つ説明していきたいのですが、かなり公式のdocumentと友人2の記事が充実しているので、これで説明に代えます。"
+  },
+  {
+    "objectID": "posts/blog_tech/index.html#github-pages",
+    "href": "posts/blog_tech/index.html#github-pages",
+    "title": "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話",
+    "section": "GitHub Pages",
+    "text": "GitHub Pages\n一般的な概要はGitHub公式のdocument、Quartoとの連携についてはQuarto公式のdocumentにまとまっていて、これを読めば全てわかるように書かれてあるのですが、簡約版を記載しておきます。\n\nGitHub Pagesとは\nGitHub Pagesというのは、GitHub上のレポジトリに置いたhtml, css, Javascriptといったコードを認識して、これらのコードを元にGitHub側で自動的にwebページをホストしてくれる機能のことです。本来、webページを作るためにはドメインを取得して（.comや.jpといった有料ドメインならお名前.comで定期購入するとか）、サーバー（これもリモートの月額いくらのものがあったり、自宅に設置したりする）を押さえて……といった、コーディングとは別次元の面倒な作業が必要とされます（し、こういった手続きに慣れておくのも悪くはありません）が、こういった面倒さから解放されるための手段の一つがGitHub Pagesというわけです。因みに、同種のツールとしてNetlifyが挙げられます。Netlifyで書かれたwebアプリの例としては、Genochemyがあります。\n\n\nQuartoとの連携\n作成したQuartoの新規プロジェクトのディレクトリをGitHubに同期します。以下は、VScodeでQuartoの新規プロジェクトを作った直後からの作業を想定しています。\n\n対応するGitHubレポジトリを作成する。 作りましょう。\n作成したレポジトリと手元のコードを紐付ける。 以下をshellに入れます。ここまでは、GitHub Pagesではなく、GitHub全般に共通する作業です。\n\n$ git init\n$ git remote add origin https://github.com/OWNER/REPOSITORY.git\n\n続いて、renderしてからGitHubにpushします。\n\n$ quarto render\n$ git push\n\n最後に、GitHubレポジトリのSettings/Codes and automation/Pagesという階層にGitHub Pages siteをビルトするブランチとディレクトリを指定する場所があるので、main branchの/docsディレクトリを選択します。これにより、以降手元環境からmain branchにcommitするごとにブログの内容が手元環境を反映したものになります。\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nディレクトリ構造は以下のようになっている。/postsディレクトリで作られたindex.qmdファイルが/docsディレクトリ内のindex.htmlファイルにrenderされている。このため、GitHub Pagesでは/docsディレクトリをビルドディレクトリに指定した。\n.\n├── _freeze\n├── _quarto.yml\n├── blog.qmd\n├── docs\n│   ├── about.html\n│   ├── blog.html\n│   ├── index.html\n│   ├── listings.json\n│   ├── posts\n│   │   ├── blog_tech\n│   │   │   ├── index.html\n│   │   │   └── kyoikuto.JPG\n│   │   ├── post1\n│   │   │   ├── index.html\n│   │   │   └── kyoikuto.JPG\n│   ├── profile.jpg\n│   ├── search.json\n│   ├── site_libs\n├── index.qmd\n├── posts\n│   ├── _metadata.yml\n│   ├── blog_tech\n│   │   ├── index.qmd\n│   │   └── kyoikuto.JPG\n│   ├── post1\n│   │   ├── index.qmd\n│   │   ├── kyoikuto.JPG\n│   │   └── thumbnail.jpg\n├── profile.jpg\n└── styles.css"
+  },
+  {
+    "objectID": "posts/blog_creation/index.html",
+    "href": "posts/blog_creation/index.html",
+    "title": "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話",
+    "section": "",
+    "text": "投稿1でブログを開設した際の技術的詳細について"
+  },
+  {
+    "objectID": "posts/blog_creation/index.html#quarto",
+    "href": "posts/blog_creation/index.html#quarto",
+    "title": "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話",
+    "section": "Quarto",
+    "text": "Quarto\n\nQuartoとは？\nまず、Quartoについて。Quartoというのはオープンソース科学/技術出版システムの一つで、qmd形式という一種のMarkdown形式で記述したテキストをpdfやhtmlなど、さまざまな形式に変換するシステムになっています。\nそもそもMarkdown形式とは何か？ということについては、wikipediaを参照してください。Markdown形式を使うと、適切なエディタやサーバー（NotionとかObsidianなどが有名でしょう、ある友人はTyporaというやつを推しています。他にも、mediawikiなんかに使われています。）のサポートを受けて、簡単に見出しや太字、斜体付きのメモを取ることができます。もちろんWordでも見出しや太字、斜体付きのメモは取れますが、いちいち文字列を選択してctrl+Bとかctrl+Iとかやるのはある観点からは面倒です。\n\n\nうれしさ\nQuartoのうれしさというのは、主に2つある気がしています。\n1つは、Markdown記法に共通のうれしさです。備忘録や講義ノートとして雑に書いたメモをそのままレポートやweb記事に転用できたら嬉しいですよね？僕は嬉しいです。正直、web記事を書くだけならQiita等を使えばいい話ではあるので、同じ記法で種々の媒体に載せることができるというのがメリットの一つかなと思っています。 例えば、LaTeXを使うと非常に綺麗な数式入りのレポートを執筆することができますが、これをそのままwebに転用することは困難です（KaTeXとかあるけど）。一方、Markdown記法を駆使してQiitaで手早く技術系の記事を仕上げることはできますが、同じやり方でレポートを書くことはできません。\n2つ目はQuartoに固有の特徴故のもので、様々なプログラミング言語を内部で処理できるということです。具体的には、PythonやJulia、R、Javascriptなどです（恐らくメインのユーザーはPython使いだが、歴史的経緯的にはRが先頭に来る）。PythonとQuartoを組み合わせた使用例としてはこれを読むとよいです。\n\n\n導入について\n一つ一つ説明していきたいのですが、かなり公式のdocumentと友人2の記事が充実しているので、これで説明に代えます。"
+  },
+  {
+    "objectID": "posts/blog_creation/index.html#github-pages",
+    "href": "posts/blog_creation/index.html#github-pages",
+    "title": "QuartoとGitHub Pagesで、メモを書くように自作ブログを作れた話",
+    "section": "GitHub Pages",
+    "text": "GitHub Pages\n一般的な概要はGitHub公式のdocument、Quartoとの連携についてはQuarto公式のdocumentにまとまっていて、これを読めば全てわかるように書かれてあるのですが、簡約版を記載しておきます。\n\nGitHub Pagesとは\nGitHub Pagesというのは、GitHub上のレポジトリに置いたhtml, css, Javascriptといったコードを認識して、これらのコードを元にGitHub側で自動的にwebページをホストしてくれる機能のことです。本来、webページを作るためにはドメインを取得して（.comや.jpといった有料ドメインならお名前.comで定期購入するとか）、サーバー（これもリモートの月額いくらのものがあったり、自宅に設置したりする）を押さえて……といった、コーディングとは別次元の面倒な作業が必要とされます（し、こういった手続きに慣れておくのも悪くはありません）が、こういった面倒さから解放されるための手段の一つがGitHub Pagesというわけです。因みに、同種のツールとしてNetlifyが挙げられます。Netlifyで書かれたwebアプリの例としては、Genochemyがあります。\n\n\nQuartoとの連携\n作成したQuartoの新規プロジェクトのディレクトリをGitHubに同期します。以下は、VScodeでQuartoの新規プロジェクトを作った直後からの作業を想定しています。\n\n対応するGitHubレポジトリを作成する。 作りましょう。\n作成したレポジトリと手元のコードを紐付ける。 以下をshellに入れます。ここまでは、GitHub Pagesではなく、GitHub全般に共通する作業です。\n\n$ git init\n$ git remote add origin https://github.com/OWNER/REPOSITORY.git\n\n続いて、renderしてからGitHubにpushします。\n\n$ quarto render\n$ git push\n\n最後に、GitHubレポジトリのSettings/Codes and automation/Pagesという階層にGitHub Pages siteをビルトするブランチとディレクトリを指定する場所があるので、main branchの/docsディレクトリを選択します。これにより、以降手元環境からmain branchにcommitするごとにブログの内容が手元環境を反映したものになります。\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nディレクトリ構造は以下のようになっている。/postsディレクトリで作られたindex.qmdファイルが/docsディレクトリ内のindex.htmlファイルにrenderされている。このため、GitHub Pagesでは/docsディレクトリをビルドディレクトリに指定した。\n.\n├── _freeze\n├── _quarto.yml\n├── blog.qmd\n├── docs\n│   ├── about.html\n│   ├── blog.html\n│   ├── index.html\n│   ├── listings.json\n│   ├── posts\n│   │   ├── blog_tech\n│   │   │   ├── index.html\n│   │   │   └── kyoikuto.JPG\n│   │   ├── post1\n│   │   │   ├── index.html\n│   │   │   └── kyoikuto.JPG\n│   ├── profile.jpg\n│   ├── search.json\n│   ├── site_libs\n├── index.qmd\n├── posts\n│   ├── _metadata.yml\n│   ├── blog_tech\n│   │   ├── index.qmd\n│   │   └── kyoikuto.JPG\n│   ├── post1\n│   │   ├── index.qmd\n│   │   ├── kyoikuto.JPG\n│   │   └── thumbnail.jpg\n├── profile.jpg\n└── styles.css"
   }
 ]
