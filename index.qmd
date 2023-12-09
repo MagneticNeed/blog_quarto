@@ -1,6 +1,6 @@
 ---
 title: "甘針 謡(Yo Amahari)"
-image: profile.jpg
+image: profile.png
 about:
   template: jolla
   links:
